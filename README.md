@@ -1,5 +1,5 @@
 # 📚 SELF-MADE PROGRAMMING TUTORIALS 📖
-### :point_right: By Nevin Jojo :point_left:
+##### :point_right: By Nevin Jojo :point_left:
 
 This is a 'library / directory' of all of the self-made tutorials for programming / tech-related topics.
 
@@ -14,3 +14,6 @@ Hope this helps other peeps 🙂
 - [Linux Directories](https://docs.google.com/document/d/1re2BpYIl9997lvbRRSKEfLkjYkPV7irJHgR8ODT7QyM/edit?usp=sharing)
 - [Ruby on Rails Tutorial](https://docs.google.com/document/d/1goVm6mE-zc5uBdAGx5BcMgQA1uf-pFfZzeUq9cHVpKY/edit?usp=sharing)
 - [More to come...]()
+
+
+:end:
