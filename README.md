@@ -13,6 +13,7 @@ Hope this helps other peeps 🙂
 - [SQL Commands and Syntaxes](https://docs.google.com/document/d/1bNFFfjsETlyoEkuLKitfPgXdV1aEqofiEnF1ijPwOAE/edit?usp=sharing)
 - [Linux Directories](https://docs.google.com/document/d/1re2BpYIl9997lvbRRSKEfLkjYkPV7irJHgR8ODT7QyM/edit?usp=sharing)
 - [Ruby on Rails Tutorial](https://docs.google.com/document/d/1goVm6mE-zc5uBdAGx5BcMgQA1uf-pFfZzeUq9cHVpKY/edit?usp=sharing)
+- [Swift iOS Tutorial](https://docs.google.com/document/d/15UPDjwaOyVvhbEjY6rER-mYLqvxGRBWH41LmrayCR8M/edit?usp=sharing):phone:
 - [More to come...]()
 
 
