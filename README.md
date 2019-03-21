@@ -5,6 +5,8 @@ This is a 'library / directory' of all of the self-made tutorials for programmin
 
 The tutorial files will be updated when new changes are made.
 
+Check out my [GitHub Gist](https://gist.github.com/nevinjojo/) to find other handy-dandy programming stuff 🙂
+
 Hope this helps other peeps 🙂
 
 ## List of tutorials:
@@ -18,5 +20,5 @@ Hope this helps other peeps 🙂
 - [More to come...]()
 
 
-![Quack Quack!](https://i.ytimg.com/vi/MtN1YnoL46Q/hqdefault.jpg)
+![Quack Quack!](https://i.ytimg.com/vi/MtN1YnoL46Q/hqdefault.jpg =250x250)
 :end:
