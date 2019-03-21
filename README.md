@@ -21,4 +21,5 @@ Hope this helps other peeps 🙂
 
 
 ![Quack Quack!](https://i.ytimg.com/vi/MtN1YnoL46Q/hqdefault.jpg | width=100)
+![](https://i.ytimg.com/vi/MtN1YnoL46Q/hqdefault.jpg | width=100)
 :end:
