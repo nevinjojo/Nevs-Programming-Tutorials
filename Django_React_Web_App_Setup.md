@@ -51,16 +51,16 @@ Output
 #### Configure packages installed
 `vim myProject/myProject/settings.py`
 
-* Add the following inside the `INSTALLED_APPS` block:
+Add the following inside the `INSTALLED_APPS` block:
 
-* ```
+```
 'rest_framework',
 'corsheaders'
 ```
 
-* Add the following inside the `MIDDLEWARE` block:
+Add the following inside the `MIDDLEWARE` block:
 
-* ```
+```
 'corsheaders.middleware.CorsMiddleware'
 ```
 
