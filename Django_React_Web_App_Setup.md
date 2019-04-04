@@ -64,9 +64,9 @@ Output
 'corsheaders.middleware.CorsMiddleware'
 ```
 
-* Add the following anywhere in the settings.py file:
+Add the following anywhere in the settings.py file:
 
-* ```
+```
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
        'localhost:3000',
