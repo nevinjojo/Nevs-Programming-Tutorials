@@ -17,6 +17,9 @@ Hope this helps other peeps 🙂
 - [Ruby on Rails Tutorial](https://docs.google.com/document/d/1goVm6mE-zc5uBdAGx5BcMgQA1uf-pFfZzeUq9cHVpKY/edit?usp=sharing)
 - [Swift iOS Tutorial](https://docs.google.com/document/d/15UPDjwaOyVvhbEjY6rER-mYLqvxGRBWH41LmrayCR8M/edit?usp=sharing)
 - [Gnuplot: Graphing tutorial for noobs](https://docs.google.com/document/d/1Xof2-_49nDBxBmPhcdf4PoB03Sb__PSDZJXRzs-EfcI/edit?usp=sharing)
+- [Django & React Web App Setup Tutorial]()
+- [Docker Tutorial]()
+- [Seeting up a website on an AWS EC2 Instance]()
 - [More to come...]()
 
 
