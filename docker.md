@@ -114,20 +114,48 @@ Containers are designed to leave nothing behind. But what about having data pers
 
 When starting up a Docker container you can specify directories as mount points for volumes, which are repositories for shared or persistent data that remain even if a container gets removed. When a container is exited, any volumes it was using persist — so if you start a second container it can use all the data from the previous one.
 
-## Terminology: Dockerfile
-A Dockerfile is a simple text file that contains a list of commands the Docker client calls (on the command line) when assembling an image. This essentially automates the image creation process because these special files are, basically, scripts — a set list of commands/instructions and arguments that automatically perform actions on a chosen base image.
-
 ## Terminology: Registry
 The registry is the central distribution point for deploying Docker containers. You can orchestrate distribution directly from your Docker host. The registry works basically like a git repository, allowing you to push and pull container images.
 
+## Build your own Docker Image
+Clone the following repo
+`git clone https://github.com/prakhar1989/docker-curriculum`
+
+Inside the `flask-app` directory there is a file called `Dockerfile`. What is a Dockerfile?...
+
+### Terminology: Dockerfile
+A Dockerfile is a simple text file that contains a list of commands the Docker client calls (on the command line) when assembling an image. This essentially automates the image creation process because these special files are, basically, scripts — a set list of commands/instructions and arguments that automatically perform actions on a chosen base image.
+
+To create the image, add the following to a new file in the directory called Dockerfile:
+```
+# our base image
+FROM python:3-onbuild
+
+# specify the port number the container should expose
+EXPOSE 5000
+
+# run the application
+CMD ["python", "./app.py"]
+```
+
+In the Dockerfile within flask-app you should find the following commands:
+* `FROM python:3-onbuild` - specifies the base image.
+* `EXPOSE 5000` - specify thr port in which the flask app is running.
+* `CMD ["python", "./app.py"]` - command for runnning the python application. 
 
 
+### Build the image using Dockerfile
+Assuming you are still running your webapp using `docker run -p 8888:80 [image name]`
+Run the Dockerfile using `docker build -t [docker-hub-username]/catnip .` where `-t` is an optional tag name that will create the image in the same directory where the Dockerfile exist.
+
+Run `docker images` to check if the image had been created.
+
+Run docker run -p 8888:5000 [docker-hub-username]/catnip` to run the image you created. The command we just ran used port 5000 for the server inside the container, and exposed this externally on port 8888.
+
+Head over to `http://192.168.99.100:8888` to view your live app.
 
 
-
-
-
-
+## Docker & AWS: Name a more iconic duo, I'll wait.
 
 
 
