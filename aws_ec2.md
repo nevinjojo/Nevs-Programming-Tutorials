@@ -100,8 +100,11 @@ Configure the web server to restart of it randomnly stops
 
 Copy the public key from `id_rsa.pub` and store it to the list of SSH keys on your Github account. You can learn more about how to configure github account to your new SSH key [here](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account). 
 
-Once the basic setup is complete clone your project from github
+Once the basic setup is complete, clone your project from github to `/var/www/html`
 `git clone git@github.com:<username>/<repo_name>.git`
+
+N.B.1: You might get a permission denied prompt if you tried to clone to `/var/www/html` while not being a root user. Therefore you need to `sudo su` before cloning.
+N.B.2: Make sure that the index.html file of your website is visible from `/var/www/html` after you clone the repo. You might have to move all of the contents of the repository folder to `/var/www/html` in order for the normal running of the site.
 
 ### Option II: Create a static site from scratch
 Navigate to the directory `cd /var/www/html`.
