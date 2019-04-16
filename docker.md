@@ -154,18 +154,31 @@ Run docker run -p 8888:5000 [docker-hub-username]/catnip` to run the image you c
 
 Head over to `http://192.168.99.100:8888` to view your live app.
 
+If you push your image to a public docker repository, by running `docker push [username]/catnip`, anyone who has docker installed can play with your app by typing just a single command:
+`docker run -p 8888:5000 [username]/catnip`
 
 ## Docker & AWS: Name a more iconic duo, I'll wait.
+AWS provides you with an option of hosting single-container Docker environments. This will allow you to host your application by simply uploading your Dockerrun.aws.json file to the Elastic Beanstalk (EB) application. The Dockerrun.aws.json file will acquire the image from your AWS repository (assuming it is a public repository) and create a container in the EB instance with your application in it.
 
+### How to launch your app using AWS
+The rest of the instructions will be based on the assumption that you have an AWS account set up already.
 
+#### Terminoloogy: Beanstalk
+AWS Elastic Beanstalk (EB) is a PaaS (Platform as a Service) offered by AWS. As a developer, you just tell EB how to run your app and it takes care of the rest - including scaling, monitoring and even updates. Beanstalk supports running single-container Docker deployments (which is what we'll be using). 
 
+#### Create new application using EB
+* Login to your AWS console.
+* Click on Elastic Beanstalk. It will be in the compute section on the top left.
+* Click on "Create New Application" in the top right
+* Give your app a name and provide an (optional) description. The name has to be unique.
+* In the New Environment screen, create a new environment and choose the Web Server Environment.
+* Fill in the environment information by choosing a domain.
+* Under base configuration section, choose Docker from the predefined platform.
+* Open the Dockerrun.aws.json file located in the flask-app folder and edit the Name of the image to your image's name: changed `"Name": "prakhar1989/catnip"` to `[your-image-name]`.
+* When you are done, click on the radio button for "upload your own" and choose this file.
+* Once you complete the setup, it should take a while for the image to be setup into the application.
 
-
-
-
-
-
-
+On the EB application page on AWS, there should be a URL, which should direct you to the application you just deployed using Docker & AWS Elastic Beanstalk. Nice job!
 
 
 
