@@ -1,6 +1,6 @@
-# Javascript Tutorial
+# JavaScript Tutorial
 ## Beginner
-You can skip this if you have done Java, or have a quick read if you want to checkout the syntax.
+You can skip this if you have done Java. Have a quick read if you want to checkout the syntax.
 
 ### Internal scripting
 This goes inside HTML
@@ -38,6 +38,7 @@ var total = apples + oranges;
 ```
 
 ### Logic
+
 * Equal to: `===`
 * Not equal to: `!==`
 * Greater than: `>`
@@ -85,7 +86,7 @@ var result = add(10, 12);  // result equals 22
 ```
 
 ### Objects
-Creating objects in Javascript is as simple as creating structs in C (if you are familiar with it). You can declare and/or initialise variables and functions within the objects.
+Creating objects in JavaScript is as simple as creating structs in C (if you are familiar with it). You can declare and/or initialise variables and functions within the objects.
 ```
 var newObj = {};  // empty object
 
@@ -118,3 +119,79 @@ shoppingList.pop(); // removes LAST item, i.e. 'Baguette' from the list
 
 
 
+## Intermediate Level
+This is where we are actually going to integrate HTML, CSS and JavaScript.
+
+### DOM (Document Object Model)
+The Document Object Model is a way to manipulate the structure and style of an HTML page. It represents the internals of the page as the browser sees it, and allows the developer to alter it with JavaScript.
+
+You can find the complete DOM element documentation [here](https://www.w3schools.com/js/js_htmldom_document.asp).
+
+#### Getting an element from HTML or XML
+To work with the elements in HTML or XML, you need to get the element first:
+
+* By ID: `var pageHeader = document.getElementById('page-header');`
+* By Tag Name: `var divs = document.getElementsByTagName("div");`
+* By Class Name: `var x = document.getElementsByClassName("intro");`
+* By CSS Selector: `var x = document.querySelectorAll("p.intro");` or `var x = document.querySelectorAll("p#title");`
+
+### Events and Callbacks
+Events in websites occur when the page loads, when user clicks a button, scrolls down etc.
+To react to an event you listen for it and supply a function which will be called by the browser when the event occurs. This function is known as a callback.
+
+```
+var handleClick = function (event) {
+    // do something!
+};
+
+var button = document.querySelector('#big-button');
+button.addEventListener('click', handleClick);
+```
+
+Note: As we all know, Internet Explorer is a useless piece of trash. Therefore it does not support certain functions such as `addEventListener`.
+
+### [AJAX](https://htmldog.com/guides/javascript/intermediate/ajax/)
+To retrieve new content for a page, like new articles on an infinite-scroll site or to notify you of new emails, a tool called an **XML HTTP Request (XHR)** is used. Web apps that do this are also called **AJAX apps**, AJAX standing for **Asynchronous JavaScript and XML**.
+
+```
+var req = new XMLHttpRequest();
+req.onload = function (event) { . . . };
+req.open('get', 'some-file.txt', true);
+req.send();
+```
+
+The first thing to do is create a new XMLHttpRequest request, using the new keyword, and calling XMLHttpRequest like a function.
+
+Then we specify a callback function, to be called when the data is loaded. It is passed information about the event as its first argument.
+
+Then we specify how to get the data we want, using req.open. The first argument is the HTTP method (GET, POST, PUT etc). Next is the URL to fetch from - this is similar to the href attribute of a link.
+
+The third is a boolean specifying whether the request is asynchronous - here we have it true, so the XMLHttpRequest is fired off and then code execution continues until a response from the server causes the onload callback to be fired.
+
+The asynchronous parameter defaults to false - if it’s false, execution of the code will pause at this line until the data is retrieved and the request is called synchronous. Synchronous XMLHttpRequests are not used often as a request to a server can, potentially, take an eternity. Which is a long time for the browser to be doing nothing.
+
+On the last line we tell the browser to fire off the request for data.
+
+### JSON - JavaScript Object Notation
+JSON is a set of text formatting rules for storing and transferring data. Note that **JSON is not JavaScript** but a totally different language by itself. JSON is used by a lot of other languages as well. JSON can be used to transfer simple data such as text, arrays etc, but not complex data like functions.
+
+Example:
+```
+{ "name": "Jeff", age: 43, "tools": {"gun": "AK-47"} }
+```
+
+#### Using JSON
+`JSON.stringify` is a method that can be called to convert objects into a JSON string:
+```
+var input = JSON.stringify({
+  name: "Jeff",
+  age: 43
+});
+```
+
+The string can then be converted back to JavaSrcipt object using `JSON.parse` function
+```
+var output = JSON.parse(input);
+```
+The JSON object can now be used like a normal object:
+`var newName = output.name;`
