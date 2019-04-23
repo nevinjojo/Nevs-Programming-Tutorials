@@ -190,8 +190,47 @@ var input = JSON.stringify({
 ```
 
 The string can then be converted back to JavaSrcipt object using `JSON.parse` function
-```
-var output = JSON.parse(input);
-```
+`var output = JSON.parse(input);`
 The JSON object can now be used like a normal object:
-`var newName = output.name;`
+
+var newName = output.name;`
+
+
+### [Scope](https://htmldog.com/guides/javascript/intermediate/scope/)
+If you have done OOP using languages such as Java, you should be familiar with Scopes. Scope is the term used to mean variable visibility — a variable’s scope is the part of your code that can access and modify that variable.
+
+For example, a is not defined outside the function:
+```
+var doSomething = function () {
+    var a = 10;
+};
+
+doSomething();
+
+console.log(a); // a is undefined
+```
+
+However, in this block of code, b is defined as it is not within a function:
+```
+var a = 10;
+
+if (a > 5) {
+    var b = 5;
+}
+
+var c = a + b; // c is 15
+```
+
+### JQuery - The cross-browser hero we deserve!
+JQuery is the cross-browser DOM library that handles the differences in functions between various browsers. This is needed because different browsers will only accept particulars functions or not accept some of the mosr popular functions at all (cough cough Internet Explorer cough). The way you interact with DOM is called Application Programming Interface API. 
+
+jQuery has a very distinctive syntax, all based around the dollar symbol:
+```
+$('.btn').click(function () {
+    // do something
+});
+```
+Note: To use JQuery, you need to either [download](http://jquery.com/download/) the script and add it to your site directory, or include the script to your HTML:
+```
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+```
