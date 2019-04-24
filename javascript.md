@@ -245,7 +245,7 @@ $('.btn').click(function () {
 });
 ```
 
-Note: To use jQuery, you need to either [download](http://jquery.com/download/) the script and add it to your site directory, or include the script to your HTML:
+**Important Note:** To use jQuery, you need to either [download](http://jquery.com/download/) the script and add it to your site directory, or include the script to your HTML:
 
 ```
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -263,6 +263,36 @@ Other examples:
 ```
 var currentHeight = $('.note').height(),
     currentColor = $('.note').css('color');
+```
+
+#### JavaScript v/s jQuery tricks
+Using jQuery for certain tasks are more prefered over using JavaScript as it works with all browsers.
+
+##### DOMContentLoaded
+Suppose you want to do something after the DOM content (HTML content) is loaded but before the css is loaded:
+
+| JavaScript                                                  | jQuery                          |
+| ----------------------------------------------------------- | ------------------------------- |
+| `window.addEventListener('DOMContentLoaded', doSomething);` | `$(window).ready(doSomething);` |
+
+##### Load
+Suppose you wanna do something once the page is fully loaded:
+
+| JavaScript                                      | jQuery                         |
+| ----------------------------------------------- | ------------------------------ |
+| `window.addEventListener('load', doSomething);` | `$(window).load(doSomething);` |
+
+##### Type Checking
+Since JavaScript lets you create variables without specifying the type, it is easy to make errors with value types. It's way easier to check for types of variables in jQuery than in JavaScript:
+
+```
+$.isArray([1, 2, 3]); //checks if [1, 2, 3] is an array
+
+$.isFunction(function() {}); // checks if function() {} is function or not
+
+$.isNumeric('Tom'); // returns false
+
+$.isPlainObject({ name: 'Tom' }); // returns true
 ```
 
 #### Setting Context for jQuery
