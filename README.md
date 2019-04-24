@@ -10,6 +10,7 @@ Check out my [GitHub Gist](https://gist.github.com/nevinjojo/) to find other han
 Hope this helps other peeps 🙂
 
 ## List of tutorials:
+- [JavaScript Tutorial]()
 - [Setting up Debian VM](https://docs.google.com/document/d/1Q_mRZCC-3--upPoRfP-SCt5Vw7u65HNXLKftnu6x_gY/edit?usp=sharing)
 - [Complete Perl Tutorial](https://docs.google.com/document/d/1Iw0GWRyh-22mhXg_gV-j0WxrMwf8DFdrhPO0NXCa52c/edit?usp=sharing)
 - [SQL Commands and Syntaxes](https://docs.google.com/document/d/1bNFFfjsETlyoEkuLKitfPgXdV1aEqofiEnF1ijPwOAE/edit?usp=sharing)
