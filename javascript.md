@@ -4,6 +4,7 @@ You can skip this if you have done Java. Have a quick read if you want to checko
 
 ### Internal scripting
 This goes inside HTML
+
 ```
 <script>
     alert("I am called from a .html file!");
@@ -14,6 +15,7 @@ Note: you can view the result of an alert in the console of your browser (develo
 
 ### External scripting
 This goes in a .js file
+
 ```
 alert("I am called from a .js file!");
 ```
@@ -31,6 +33,7 @@ You can also initialize the variable yourself:
 
 
 ### Quick Maths!
+
 ```
 var apples = 10;
 var oranges = 12;
@@ -49,6 +52,7 @@ var total = apples + oranges;
 Note: `10 === 10` returns `true`, but `10 === '10'` returns `false`.
 
 ### Conditional
+
 ```
 if (43 > 2) {
    // some code
@@ -61,6 +65,7 @@ Note: `//` are comments
 
 ### Loops
 #### While loops
+
 ```
 var i = 0;
 while (i < 10) {
@@ -70,6 +75,7 @@ while (i < 10) {
 ```
 
 #### For loops
+
 ```
 for (var i =0; i < 10; i++) {
   alert(i);
@@ -77,6 +83,7 @@ for (var i =0; i < 10; i++) {
 ```
 
 ### Functions
+
 ```
 var add = function (a,b) {
   return a + b;
@@ -87,6 +94,7 @@ var result = add(10, 12);  // result equals 22
 
 ### Objects
 Creating objects in JavaScript is as simple as creating structs in C (if you are familiar with it). You can declare and/or initialise variables and functions within the objects.
+
 ```
 var newObj = {};  // empty object
 
@@ -106,6 +114,7 @@ You can add new variables and functions on the fly as well:
 `person.dance = function () { alert("I'm dancing!"); }`
 
 ### Arrays
+
 ```
 var newList = []; // empty list
 var shoppingList = ['Spaghetti', 'Baked Beans'];
@@ -176,12 +185,14 @@ On the last line we tell the browser to fire off the request for data.
 JSON is a set of text formatting rules for storing and transferring data. Note that **JSON is not JavaScript** but a totally different language by itself. JSON is used by a lot of other languages as well. JSON can be used to transfer simple data such as text, arrays etc, but not complex data like functions.
 
 Example:
+
 ```
 { "name": "Jeff", age: 43, "tools": {"gun": "AK-47"} }
 ```
 
 #### Using JSON
 `JSON.stringify` is a method that can be called to convert objects into a JSON string:
+
 ```
 var input = JSON.stringify({
   name: "Jeff",
@@ -200,6 +211,7 @@ var newName = output.name;`
 If you have done OOP using languages such as Java, you should be familiar with Scopes. Scope is the term used to mean variable visibility — a variable’s scope is the part of your code that can access and modify that variable.
 
 For example, a is not defined outside the function:
+
 ```
 var doSomething = function () {
     var a = 10;
@@ -211,6 +223,7 @@ console.log(a); // a is undefined
 ```
 
 However, in this block of code, b is defined as it is not within a function:
+
 ```
 var a = 10;
 
@@ -221,16 +234,82 @@ if (a > 5) {
 var c = a + b; // c is 15
 ```
 
-### JQuery - The cross-browser hero we deserve!
-JQuery is the cross-browser DOM library that handles the differences in functions between various browsers. This is needed because different browsers will only accept particulars functions or not accept some of the mosr popular functions at all (cough cough Internet Explorer cough). The way you interact with DOM is called Application Programming Interface API. 
+### jQuery - The cross-browser hero we deserve!
+jQuery is the cross-browser DOM library that handles the differences in functions between various browsers. This is needed because different browsers will only accept particulars functions or not accept some of the mosr popular functions at all (cough cough Internet Explorer cough). The way you interact with DOM is called Application Programming Interface API. 
 
 jQuery has a very distinctive syntax, all based around the dollar symbol:
+
 ```
 $('.btn').click(function () {
     // do something
 });
 ```
-Note: To use JQuery, you need to either [download](http://jquery.com/download/) the script and add it to your site directory, or include the script to your HTML:
+
+Note: To use jQuery, you need to either [download](http://jquery.com/download/) the script and add it to your site directory, or include the script to your HTML:
+
 ```
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+```
+
+#### jQuery and DOM API
+jQuery uses a really neat chainable syntax that allows the following code format:
+
+`$('.note').css('background', 'red').height(100);`
+
+`$` is a function that returns a jQuery wrapper around an element. .css is a method of that jQuery wrapper and it too returns the same wrapper. .height sets the height (duh) of the element selected, and of course there’s an equivalent for width.
+
+Other examples:
+
+```
+var currentHeight = $('.note').height(),
+    currentColor = $('.note').css('color');
+```
+
+#### Setting Context for jQuery
+Sometime you want to specify that jQuery should only access certain branches of the DOM tree. To do that you can specify the context the following way:
+
+```
+var $header = $('header'),
+    $headerBoxes = $('.note', $header);
+```
+
+This way jQuery will only look for the `note` object within the `$header` context.
+
+#### jQuery and AJAX helper methods
+jQuery allows you to also construct, call and send ajax requests.
+
+##### `$.ajax`
+Allows to manually construct a request.
+
+```
+$.ajax({
+  url: `/src.json`,
+  method: 'GET',
+  success: function () {
+    console.log("success: " + data);
+  },
+  error: function () {
+    // something something..
+  }
+});
+```
+
+##### `$.get`
+Allows to get data from a json file.
+
+```
+$.get('/src.json', function (data) {
+  console.log(data);
+});
+```
+
+##### `$.post`
+Allows to send request/ data to a server.
+
+```
+$.post('/save', { username: 'tom' }, function (data) {
+    console.log(data);
+}).fail(function () {
+    // Uh oh, something went wrong
+});
 ```
