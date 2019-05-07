@@ -1,4 +1,6 @@
 # JavaScript Tutorial
+Welcome to the JavaScript tutorial! If you are familiar with Java, you are gonna feel right at home. If not, let's get started!
+
 ## Beginner
 You can skip this if you have done Java. Have a quick read if you want to checkout the syntax.
 
@@ -343,3 +345,41 @@ $.post('/save', { username: 'tom' }, function (data) {
     // Uh oh, something went wrong
 });
 ```
+
+
+
+## Advanced Level
+Well, this is not really 'advanced' if you are familiar with programming in other programming languages. These topics will be focused to people who are more new to the web-development world. Have a quick read through the topics even if you are familiar it. Who knows, maybe you'll pick up something new!
+
+### Object Oriented Programming
+Note: I will only be going through these topics briefly. Check out [htmldog's](https://htmldog.com/guides/javascript/advanced/oo/) description for a more detailed understanding.
+
+Objects helps us categorise the data and functionalities in a program. These objects helps you connect the different parts of the program together. The grouping of data and behavior into one entity is called **encapsulation**.
+
+#### Inheriance
+A powerful tool available to you when building applications using objects is called inheritance. This is where an object inherits properties and methods from another object. An object can alter the properties and methods it inherits and add additional properties and methods too.
+
+##### Creating an object constructor
+
+```
+var Person = function (name) {
+    this.name = name;
+};
+```
+
+Note the capital letter on Person - this is an important convention. Generally, in JavaScript, if it’s got a capital first letter, it’s a constructor and should be used with the new keyword.
+
+Now you can use the new keyword to create Person objects:
+`var jeff = new Person('jeff');`
+
+##### Prototype Constructor function
+You can manually create the object from which the new objects will inherit by adding properties and methods to the prototype property of the constructor function.
+
+```
+// here, new function say is created on the fly using the existing variables from the constructor
+Person.prototype.say = function (words) {
+  alert(this.name + ' said ' + words);
+};
+```
+
+
