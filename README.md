@@ -11,7 +11,7 @@ Share it with your friends, colleagues, dad, grandma and so on. Hope this helps 
 
 ## List of tutorials:
 - [JavaScript Tutorial](https://github.com/nevinjojo/my_programming_tutorials/blob/master/javascript.md)
-- [You Don't Know JS Yet (Summary)](https://github.com/nevinjojo/my_programming_tutorials/blob/master/javascript.md)
+- [You Don't Know JS Yet (Summary)](https://github.com/nevinjojo/my_programming_tutorials/blob/master/You%20Don%20t%20Know%20JS%20Yet-Getting%20Started%20(Summary).md)
 - [Setting up Debian VM](https://docs.google.com/document/d/1Q_mRZCC-3--upPoRfP-SCt5Vw7u65HNXLKftnu6x_gY/edit?usp=sharing)
 - [Complete Perl Tutorial](https://docs.google.com/document/d/1Iw0GWRyh-22mhXg_gV-j0WxrMwf8DFdrhPO0NXCa52c/edit?usp=sharing)
 - [SQL Commands and Syntaxes](https://docs.google.com/document/d/1bNFFfjsETlyoEkuLKitfPgXdV1aEqofiEnF1ijPwOAE/edit?usp=sharing)
