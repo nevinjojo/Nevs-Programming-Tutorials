@@ -28,7 +28,7 @@ It is a type of scope definition where every inner level has access to it's oute
 
 Scope bubbles are determined during compilation based on where the functions/blocks of scope are written, the nesting inside each other, and so on. **References to variables/identifiers are allowed if there's a matching declaration either in the current scope, or any scope above/outside the current scope, but not with declarations lower/inside current scope.**
 
-![You%20Don%20t%20Know%20JS%20Yet%20Scope%20Closures/Screen_Shot_2020-03-21_at_9.49.26_AM.png](You%20Don%20t%20Know%20JS%20Yet%20Scope%20Closures/Screen_Shot_2020-03-21_at_9.49.26_AM.png)
+![Fig 2.0](You%20Don%20t%20Know%20JS%20Yet%20-%20Media/Screen_Shot_2020-03-21_at_9.49.26_AM.png)
 
 1. Global scope
 2. function scope
@@ -38,7 +38,7 @@ Scope bubbles are determined during compilation based on where the functions/blo
 
 If the variable is a target and strict-mode is not in effect, a confusing and surprising legacy behavior kicks in. The troublesome outcome is that the global scope's Scope Manager will just create an accidental global variable to fulfill that target assignment!
 
-![You%20Don%20t%20Know%20JS%20Yet%20Scope%20Closures/Screen_Shot_2020-03-21_at_9.55.14_AM.png](You%20Don%20t%20Know%20JS%20Yet%20Scope%20Closures/Screen_Shot_2020-03-21_at_9.55.14_AM.png)
+![Fig 2.1](You%20Don%20t%20Know%20JS%20Yet%20-%20Media/Screen_Shot_2020-03-21_at_9.55.14_AM.png)
 
 ## Chapter 3: The Scope Chain
 
