@@ -15,6 +15,7 @@ Share it with your friends, colleagues, dad, grandma and so on. Hope this helps 
 - [You Don't Know JS Yet: Scope & Closure (Summary)](https://github.com/nevinjojo/Nevs-Programming-Tutorials/blob/master/You%20Don%20t%20Know%20JS%20Yet%20Scope%20Closures.md)
 - [You Don't Know JS Yet: Objects & Prototypes (Summary)](https://github.com/nevinjojo/Nevs-Programming-Tutorials/blob/master/You%20Don%20t%20Know%20JS%20Object%20Prototypes.md)
 - [You Don't Know JS Yet: Types & Grammar (Summary)](https://github.com/nevinjojo/Nevs-Programming-Tutorials/blob/master/You%20Don%20t%20Know%20JS%20Types%20Grammar.md)
+- [Clean Code Talks: "Don't Look for Things, Ask for Things"](https://github.com/nevinjojo/Nevs-Programming-Tutorials/blob/master/Clean%20Code%20Talks%20Ask%20for%20Things%20Don%20t%20Look%20for%20Thi.md)
 - [Setting up Debian VM](https://docs.google.com/document/d/1Q_mRZCC-3--upPoRfP-SCt5Vw7u65HNXLKftnu6x_gY/edit?usp=sharing)
 - [Complete Perl Tutorial](https://docs.google.com/document/d/1Iw0GWRyh-22mhXg_gV-j0WxrMwf8DFdrhPO0NXCa52c/edit?usp=sharing)
 - [SQL Commands and Syntaxes](https://docs.google.com/document/d/1bNFFfjsETlyoEkuLKitfPgXdV1aEqofiEnF1ijPwOAE/edit?usp=sharing)
